@@ -3,8 +3,9 @@ pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
   coin-example: coin-example.html
+  constant-rate-birth: constant-rate-birth.html
   hostrep-example: hostrep-example.html
-last_built: 2025-06-16T14:47Z
+last_built: 2025-06-16T18:17Z
 urls:
   reference: http://treeppl.org/treepplr/reference
   article: http://treeppl.org/treepplr/articles
