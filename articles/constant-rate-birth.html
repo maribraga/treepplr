@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">treepplr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.9.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.9.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,7 +83,7 @@
 <p>We need to convert the tree to a <strong>TreePPL</strong> readable
 format and read the CRB model.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tp_phylo_2_json.html">tp_phylo_2_json</a></span><span class="op">(</span><span class="va">tree</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tp_phylo_2_TreePPL.html">tp_phylo_2_TreePPL</a></span><span class="op">(</span><span class="va">tree</span>, age<span class="op">=</span><span class="st">"down-top"</span><span class="op">)</span></span>
 <span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tp_model.html">tp_model</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/crb.tppl"</span>, package <span class="op">=</span> <span class="st">"treepplr"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">

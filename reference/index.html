@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">treepplr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.9.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.9.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,6 +49,12 @@
 
       <dl><dt>
 
+          <code><a href="tp_TreePPL_json.html">tp_TreePPL_json()</a></code>
+
+        </dt>
+        <dd>Convert a tppl_tree to TreePPL json str</dd>
+      </dl><dl><dt>
+
           <code><a href="tp_check_input.html">tp_check_input()</a></code>
 
         </dt>
@@ -58,7 +64,7 @@
           <code><a href="tp_compile.html">tp_compile()</a></code>
 
         </dt>
-        <dd>Compile the TreePPL program</dd>
+        <dd>Compile for <code><a href="../reference/tp_run.html">tp_run()</a></code></dd>
       </dl><dl><dt>
 
           <code><a href="tp_data.html">tp_data()</a></code>
@@ -67,16 +73,10 @@
         <dd>Import data for TreePPL program</dd>
       </dl><dl><dt>
 
-          <code><a href="tp_json.html">tp_json()</a></code>
+          <code><a href="tp_list.html">tp_list()</a></code>
 
         </dt>
-        <dd>Create a json object</dd>
-      </dl><dl><dt>
-
-          <code><a href="tp_json_list.html">tp_json_list()</a></code>
-
-        </dt>
-        <dd>Convert a json object to json list</dd>
+        <dd>Create a flat list</dd>
       </dl><dl><dt>
 
           <code><a href="tp_model.html">tp_model()</a></code>
@@ -103,10 +103,16 @@
         <dd>Parse TreePPL json output for host repertoire model</dd>
       </dl><dl><dt>
 
-          <code><a href="tp_phylo_2_json.html">tp_phylo_2_json()</a></code>
+          <code><a href="tp_phylo_2_TreePPL.html">tp_phylo_2_TreePPL()</a></code>
 
         </dt>
-        <dd>Convert phylo to json</dd>
+        <dd>Convert phylo obj to TreePPL tree</dd>
+      </dl><dl><dt>
+
+          <code><a href="tp_phylo_2_tppl_tree.html">tp_phylo_2_tppl_tree()</a></code>
+
+        </dt>
+        <dd>Convert phylo to a tppl_tree</dd>
       </dl><dl><dt>
 
           <code><a href="tp_run.html">tp_run()</a></code>
@@ -148,7 +154,13 @@
           <code><a href="tp_write.html">tp_write()</a></code>
 
         </dt>
-        <dd>Prepare input for tp_compile</dd>
+        <dd>Prepare input for <code><a href="../reference/tp_compile.html">tp_compile()</a></code></dd>
+      </dl><dl><dt>
+
+          <code><a href="tree_age_cumul.html">tree_age_cumul()</a></code>
+
+        </dt>
+        <dd>Calculate age in a tppl_tree</dd>
       </dl></div>
   </main></div>
 
