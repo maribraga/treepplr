@@ -129,14 +129,14 @@ histories from the sampled parameter values.</p>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html" class="external-link">geom_histogram</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes_eval.html" class="external-link">after_stat</a></span><span class="op">(</span><span class="va">density</span><span class="op">)</span><span class="op">)</span>, col <span class="op">=</span> <span class="st">"white"</span>, fill <span class="op">=</span> <span class="st">"lightblue"</span>, binwidth<span class="op">=</span><span class="fl">0.04</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="hostrep-example_files/figure-html/unnamed-chunk-7-1.png" width="700"></p>
+<p><img src="hostrep-example_files/figure-html/unnamed-chunk-7-1.png" class="r-plt" width="700"></p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">logs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">mu</span>, weight<span class="op">=</span><span class="va">weight</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html" class="external-link">geom_histogram</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes_eval.html" class="external-link">after_stat</a></span><span class="op">(</span><span class="va">density</span><span class="op">)</span> <span class="op">)</span>, col <span class="op">=</span> <span class="st">"white"</span>, fill <span class="op">=</span> <span class="st">"lightblue"</span>, binwidth<span class="op">=</span><span class="fl">0.04</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="hostrep-example_files/figure-html/unnamed-chunk-7-2.png" width="700"></p>
+<p><img src="hostrep-example_files/figure-html/unnamed-chunk-7-2.png" class="r-plt" width="700"></p>
 </div>
 <div class="section level2">
 <h2 id="character-history">Character history<a class="anchor" aria-label="anchor" href="#character-history"></a>
@@ -183,7 +183,7 @@ interactions.</p>
 <span><span class="op">(</span><span class="va">tp_asr_fund</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://maribraga.github.io/evolnets/reference/plot_matrix_phylo.html" class="external-link">plot_matrix_phylo</a></span><span class="op">(</span><span class="va">matrix</span>, <span class="va">tp_at_nodes</span>, <span class="va">symbiont_tree</span>, </span>
 <span>                                            <span class="va">host_tree</span>, type <span class="op">=</span> <span class="st">"repertoires"</span>, </span>
 <span>                                            repertoire <span class="op">=</span> <span class="st">"fundamental"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="hostrep-example_files/figure-html/unnamed-chunk-10-1.png" width="576"></p>
+<p><img src="hostrep-example_files/figure-html/unnamed-chunk-10-1.png" class="r-plt" width="576"></p>
 </div>
 <div class="section level3">
 <h3 id="plot-data-and-inferred-ancestral-realized-host-repertoires">Plot data and inferred ancestral realized host repertoires<a class="anchor" aria-label="anchor" href="#plot-data-and-inferred-ancestral-realized-host-repertoires"></a>
@@ -192,7 +192,7 @@ interactions.</p>
 <code class="sourceCode R"><span><span class="op">(</span><span class="va">tp_asr_real</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://maribraga.github.io/evolnets/reference/plot_matrix_phylo.html" class="external-link">plot_matrix_phylo</a></span><span class="op">(</span><span class="va">matrix</span>, <span class="va">tp_at_nodes</span>, <span class="va">symbiont_tree</span>, </span>
 <span>                                            <span class="va">host_tree</span>, type <span class="op">=</span> <span class="st">"repertoires"</span>, </span>
 <span>                                            repertoire <span class="op">=</span> <span class="st">"realized"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="hostrep-example_files/figure-html/unnamed-chunk-11-1.png" width="576"></p>
+<p><img src="hostrep-example_files/figure-html/unnamed-chunk-11-1.png" class="r-plt" width="576"></p>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -206,7 +206,7 @@ interactions.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>
