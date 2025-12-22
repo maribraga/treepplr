@@ -1,0 +1,12 @@
+pandoc: 3.1.11
+pkgdown: 2.2.0
+pkgdown_sha: ~
+articles:
+  coin-example: coin-example.html
+  constant-rate-birth: constant-rate-birth.html
+  hostrep-example: hostrep-example.html
+  tree_inference: tree_inference.html
+last_built: 2025-12-22T16:41Z
+urls:
+  reference: http://treeppl.org/treepplr/reference
+  article: http://treeppl.org/treepplr/articles
