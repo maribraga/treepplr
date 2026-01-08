@@ -75,6 +75,9 @@
 - [`tp_treeppl()`](http://treeppl.org/treepplr/reference/tp_treeppl.md)
   : Compile and run a TreePPL program
 
+- [`tp_treeppl_json()`](http://treeppl.org/treepplr/reference/tp_treeppl_json.md)
+  : Convert a tppl_tree to TreePPL json str
+
 - [`tp_write()`](http://treeppl.org/treepplr/reference/tp_write.md) :
 
   Prepare input for

@@ -10,6 +10,7 @@
 <url><loc>http://treeppl.org/treepplr/authors.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/index.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/index.html</loc></url>
+<url><loc>http://treeppl.org/treepplr/reference/pipe.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tp_check_input.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tp_compile.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tp_data.html</loc></url>
@@ -30,6 +31,7 @@
 <url><loc>http://treeppl.org/treepplr/reference/tp_stored_model.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tp_tempdir.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tp_treeppl.html</loc></url>
+<url><loc>http://treeppl.org/treepplr/reference/tp_treeppl_json.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tp_write.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tree_age_cumul.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/treepplr-package.html</loc></url>
