@@ -56,10 +56,23 @@ tp_model <- function(model_input) {
 #'   * The full path of the JSON file that contains the data, OR
 #'   * A string with the name of a model supported by treepplr
 #' (see [treepplr::tp_model_names()]), OR
-#'   * A list (or structured list) containing TreePPL data.
+#'   * A list (or structured list) containing TreePPL data, OR
+#'   * The full path of a multiple sequence alignment in fasta (.fasta, .fas) or nexus (.nexus, .nex) format;
+#'   currently supported for `tree_inference` only, (see [treepplr::tp_model_names()]).
 #'
 #' @return a list, see [treepplr::tp_check_input()] for further details.
 #' @export
+#' @examples
+#' \donttest{
+#' # Example using a model name supported by TreePPL
+#' input <- tp_data("tree_inference")
+#' input
+#'
+#' # Example using an internal FASTA file (same input data as before, but in fasta format)
+#' fasta_file <- system.file("extdata", "tree_inference.fasta", package = "treepplr")
+#' input <- tp_data(fasta_file)
+#' input
+#'}
 #'
 tp_data <- function(data_input) {
   # IF data_input is an alignment in fasta or nexus format
