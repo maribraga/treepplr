@@ -56,10 +56,12 @@ tp_treeppl()."></head><body>
 
 
 <dl><dt id="arg-data-input">data_input<a class="anchor" aria-label="anchor" href="#arg-data-input"></a></dt>
-<dd><p>One of tree options:</p><ul><li><p>The full path of the JSON file that contains the data, OR</p></li>
+<dd><p>One of the following options:</p><ul><li><p>The full path of the JSON file that contains the data, OR</p></li>
 <li><p>A string with the name of a model supported by treepplr
 (see <code><a href="tp_model_names.html">tp_model_names()</a></code>), OR</p></li>
-<li><p>A list (or structured list) containing TreePPL data.</p></li>
+<li><p>A list (or structured list) containing TreePPL data, OR</p></li>
+<li><p>The full path of a multiple sequence alignment in fasta (.fasta, .fas) or nexus (.nexus, .nex) format;
+currently supported for <code>tree_inference</code> only, (see <code><a href="tp_model_names.html">tp_model_names()</a></code>).</p></li>
 </ul></dd>
 
 </dl></div>
@@ -68,6 +70,45 @@ tp_treeppl()."></head><body>
     <p>a list, see <code><a href="tp_check_input.html">tp_check_input()</a></code> for further details.</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="co"># Example using a model name supported by TreePPL</span></span></span>
+<span class="r-in"><span><span class="va">input</span> <span class="op">&lt;-</span> <span class="fu">tp_data</span><span class="op">(</span><span class="st">"tree_inference"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">input</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $data</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13] [,14]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    1    0    2    3    0    0    0    0     3     1     1     3     3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    1    1    0    2    0    1    0    0    0     3     1     0     1     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    0    0    1    1    0    2    1    0    0     0     2     0     3     3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    0    0    1    1    0    3    0    1    0     0     2     2     3     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      [,15]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]     2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Example using an internal FASTA file (same input data as before, but in fasta format)</span></span></span>
+<span class="r-in"><span><span class="va">fasta_file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"tree_inference.fasta"</span>, package <span class="op">=</span> <span class="st">"treepplr"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">input</span> <span class="op">&lt;-</span> <span class="fu">tp_data</span><span class="op">(</span><span class="va">fasta_file</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">input</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $data</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13] [,14]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    1    0    2    3    0    0    0    0     3     1     1     3     3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    1    1    0    2    0    1    0    0    0     3     1     0     1     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    0    0    1    1    0    2    1    0    0     0     2     0     3     3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    0    0    1    1    0    3    0    1    0     0     2     2     3     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      [,15]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]     2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]     0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 
