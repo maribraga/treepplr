@@ -1,7 +1,7 @@
 # Import data for TreePPL program
 
-`tp_data` takes data and prepares it to be used by
-[`tp_treeppl()`](http://treeppl.org/treepplr/reference/tp_treeppl.md).
+Prepare data input for
+[`tp_run()`](http://treeppl.org/treepplr/reference/tp_run.md).
 
 ## Usage
 
@@ -15,24 +15,24 @@ tp_data(data_input)
 
   One of the following options:
 
-  - The full path of the JSON file that contains the data, OR
-
-  - A string with the name of a model supported by treepplr (see
-    [`tp_model_names()`](http://treeppl.org/treepplr/reference/tp_model_names.md)),
-    OR
-
   - A list (or structured list) containing TreePPL data, OR
 
   - The full path of a multiple sequence alignment in fasta (.fasta,
-    .fas) or nexus (.nexus, .nex) format; currently supported for
-    `tree_inference` only, (see
-    [`tp_model_names()`](http://treeppl.org/treepplr/reference/tp_model_names.md)).
+    .fas) or nexus (.nexus, .nex) format, OR
+
+  - For test data, a string with the name of a model supported by
+    treepplr (see
+    [`tp_model_library()`](http://treeppl.org/treepplr/reference/tp_model_library.md)).
+
+- dir:
+
+  The directory where you want to save the data file in JSON format.
+  Default is [`base::tempdir()`](https://rdrr.io/r/base/tempfile.html).
 
 ## Value
 
-a list, see
-[`tp_check_input()`](http://treeppl.org/treepplr/reference/tp_check_input.md)
-for further details.
+The path for the data file that will be used by
+[`tp_run()`](http://treeppl.org/treepplr/reference/tp_run.md).
 
 ## Examples
 
@@ -40,35 +40,16 @@ for further details.
 # \donttest{
 # Example using a model name supported by TreePPL
 input <- tp_data("tree_inference")
+#> Warning: running command 'find /tmp/NA -name testdata_tree_inference.json' had status 1
+#> Error in tp_data("tree_inference"): Invalid input string.
 input
-#> $data
-#>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13] [,14]
-#> [1,]    1    1    0    2    3    0    0    0    0     3     1     1     3     3
-#> [2,]    1    1    0    2    0    1    0    0    0     3     1     0     1     1
-#> [3,]    0    0    1    1    0    2    1    0    0     0     2     0     3     3
-#> [4,]    0    0    1    1    0    3    0    1    0     0     2     2     3     1
-#>      [,15]
-#> [1,]     2
-#> [2,]     0
-#> [3,]     0
-#> [4,]     0
-#> 
+#> Error: object 'input' not found
 
 # Example using an internal FASTA file (same input data as before, but in fasta format)
 fasta_file <- system.file("extdata", "tree_inference.fasta", package = "treepplr")
 input <- tp_data(fasta_file)
+#> Error in cat(data, file = path): argument 1 (type 'closure') cannot be handled by 'cat'
 input
-#> $data
-#>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13] [,14]
-#> [1,]    1    1    0    2    3    0    0    0    0     3     1     1     3     3
-#> [2,]    1    1    0    2    0    1    0    0    0     3     1     0     1     1
-#> [3,]    0    0    1    1    0    2    1    0    0     0     2     0     3     3
-#> [4,]    0    0    1    1    0    3    0    1    0     0     2     2     3     1
-#>      [,15]
-#> [1,]     2
-#> [2,]     0
-#> [3,]     0
-#> [4,]     0
-#> 
+#> Error: object 'input' not found
 # }
 ```

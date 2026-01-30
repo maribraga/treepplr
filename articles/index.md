@@ -7,5 +7,7 @@
   model](http://treeppl.org/treepplr/articles/constant-rate-birth.md):
 - [Host repertoire model
   example](http://treeppl.org/treepplr/articles/hostrep-example.md):
+- [Quick package
+  overview](http://treeppl.org/treepplr/articles/overview.md):
 - [Tree
   inference](http://treeppl.org/treepplr/articles/tree_inference.md):
