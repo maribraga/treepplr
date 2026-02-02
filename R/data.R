@@ -30,6 +30,12 @@ tp_expected_input <- function(model) {
 #' @param dir The directory where you want to save the data file in JSON format.
 #' Default is [base::tempdir()]. Ignored if `data_input` is the name of a model
 #' from the TreePPL library.
+#' @param age Used if one of the elements of `data_list` is an [ape::phylo] object.
+#' A string that determines the way the age of the nodes is calculated (default "tip-to-root").
+#'
+#' * "branch-length" : Root's age = NA, branch-length from the parent branch
+#' * "root-to-tip" : Root's age = 0.0, cumulative branch-length from root
+#' * "tip-to-root" : Leaf's age = 0.0, cumulative branch-length from leaf
 #'
 #' @return The path for the data file that will be used by [treepplr::tp_run()].
 #'
@@ -50,7 +56,8 @@ tp_expected_input <- function(model) {
 #' input
 #'}
 #'
-tp_data <- function(data_input, data_file_name = "tmp_data_file", dir = tp_tempdir()) {
+tp_data <- function(data_input, data_file_name = "tmp_data_file", dir = tp_tempdir(),
+                    age = "tip-to-root") {
 
   #### TODO data inputs have to be named as it is expected in the model ####
 
@@ -79,6 +86,7 @@ tp_data <- function(data_input, data_file_name = "tmp_data_file", dir = tp_tempd
 
     # flatten the list
     data_list <- tp_list(data_input)
+
     # write json with input data
     data_path <- tp_write_data(data_list, data_file_name, dir)
 
@@ -97,11 +105,25 @@ tp_data <- function(data_input, data_file_name = "tmp_data_file", dir = tp_tempd
 #' @param data_file_name An optional name for the file created
 #' @param dir The directory where you want to save the data file in JSON format.
 #' Default is [base::tempdir()].
+#' @param age Used if one of the elements of `data_list` is an [ape::phylo] object.
+#' A string that determines the way the age of the nodes is calculated (default "tip-to-root").
+#'
+#' * "branch-length" : Root's age = NA, branch-length from the parent branch
+#' * "root-to-tip" : Root's age = 0.0, cumulative branch-length from root
+#' * "tip-to-root" : Leaf's age = 0.0, cumulative branch-length from leaf
 #'
 #' @returns The path to the created file
 #'
 #' @export
-tp_write_data <- function(data_list, data_file_name = "tmp_data_file", dir = tp_tempdir()) {
+tp_write_data <- function(data_list, data_file_name = "tmp_data_file",
+                          dir = tp_tempdir(), age = "tip-to-root") {
+
+  # If an element of the list is a phylo object, convert it first
+  for (i in seq_along(data_list)) {
+    if(inherits(data_list[[i]], "phylo")) {
+      data_list[[i]] <- tp_phylo_to_tpjson(data_list[[i]], age)
+    }
+  }
 
   input_json <- jsonlite::toJSON(data_list, auto_unbox=TRUE)
   path <- paste0(dir, data_file_name, ".json")
@@ -295,8 +317,8 @@ read_aln <- function(file) {
 #' a TreePPL json str ready to print in a data file for TreePPL use.
 #'
 #' @param phylo_tree an object of class [ape::phylo].
-#' @param age a string that determines the way the age of the nodes are
-#' calculated (default "branch-length").
+#' @param age a string that determines the way the age of the nodes is
+#' calculated (default "tip-to-root").
 #'
 #' * "branch-length" : Root's age = NA, branch-length from the parent branch
 #' * "root-to-tip" : Root's age = 0.0, cumulative branch-length from root
@@ -305,7 +327,7 @@ read_aln <- function(file) {
 #' @return A TreePPL json str
 #'
 #' @export
-tp_phylo_to_tpjson <- function(phylo_tree, age = "") {
+tp_phylo_to_tpjson <- function(phylo_tree, age = "tip-to-root") {
 
   name <- "tree"
   root_tree <- tp_phylo_to_tppl_tree(phylo_tree)
