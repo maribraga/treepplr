@@ -4,8 +4,8 @@ pkgdown_sha: ~
 articles:
   coin-example: coin-example.html
   crbd-example: crbd-example.html
-  overview: overview.html
-last_built: 2026-02-02T12:44Z
+  treepplr: treepplr.html
+last_built: 2026-02-02T12:48Z
 urls:
   reference: http://treeppl.org/treepplr/reference
   article: http://treeppl.org/treepplr/articles
