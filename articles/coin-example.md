@@ -146,10 +146,10 @@ We can look at the structure of the input data using:
 
 ``` r
 jsonlite::fromJSON(data)
-#> $coinflips
-#>  [1]  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE
-#> [13]  TRUE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE
 ```
+
+    $coinflips
+     [1]  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE  TRUE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE
 
 The TreePPL compiler requires data in JSON format. The conversion from R
 variables to appropriate JSON code understood by TreePPL is done
@@ -207,10 +207,10 @@ Note that both the particle weights and normalizing constants are given
 in log units.
 
 ``` r
-output <-  tp_parse_smc(output_list)
+output <- tp_parse_smc(output_list)
 
 tp_smc_convergence(output)
-#> [1] 0.00108255
+#> [1] 0.000693138
 ```
 
 It seems that our run provides a quite accurate estimate of the

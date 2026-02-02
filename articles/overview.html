@@ -34,10 +34,8 @@
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
 <li><a class="dropdown-item" href="../articles/coin-example.html">Coin flipping</a></li>
-    <li><a class="dropdown-item" href="../articles/constant-rate-birth.html">Constant rate birth (CRB) model</a></li>
-    <li><a class="dropdown-item" href="../articles/hostrep-example.html">Host repertoire model example</a></li>
+    <li><a class="dropdown-item" href="../articles/crbd-example.html">Constant-rate Birth Death example</a></li>
     <li><a class="dropdown-item" href="../articles/overview.html">Quick package overview</a></li>
-    <li><a class="dropdown-item" href="../articles/tree_inference.html">Tree inference</a></li>
   </ul>
 </li>
       </ul>
@@ -151,6 +149,10 @@ your data to the compiled executable and choose how many independent
 runs you want to do.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">output</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tp_run.html">tp_run</a></span><span class="op">(</span>compiled_model <span class="op">=</span> <span class="va">exe_path</span>, data <span class="op">=</span> <span class="va">data_path</span>, n_runs <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="convergence">Convergence<a class="anchor" aria-label="anchor" href="#convergence"></a>
+</h2>
 <p>Then you can parse your output to produce a data frame and check for
 convergence.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
@@ -161,8 +163,13 @@ convergence.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># If using MCMC</span></span>
 <span><span class="va">output_df_mcmc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tp_parse_mcmc.html">tp_parse_mcmc</a></span><span class="op">(</span><span class="va">output</span><span class="op">)</span></span></code></pre></div>
-<!-- ## Convergence -->
-<!-- ## Post-processing -->
+</div>
+<div class="section level2">
+<h2 id="post-processing">Post-processing<a class="anchor" aria-label="anchor" href="#post-processing"></a>
+</h2>
+<p>Different models produce different outputs and thus require different
+post-processing. See the model-specific tutorials for ways to process
+your TreePPL.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

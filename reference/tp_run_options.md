@@ -5,7 +5,7 @@ Options that can be passed to a TreePPL program
 ## Usage
 
 ``` r
-tp_run_options(...)
+tp_run_options()
 ```
 
 ## Value

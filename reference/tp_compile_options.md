@@ -5,7 +5,7 @@ Options that can be passed to TreePPL compiler
 ## Usage
 
 ``` r
-tp_compile_options(...)
+tp_compile_options()
 ```
 
 ## Value

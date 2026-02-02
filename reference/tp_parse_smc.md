@@ -19,3 +19,7 @@ tp_parse_smc(treeppl_out)
 ## Value
 
 A data frame with the output from inference in TreePPL.
+
+## Details
+
+Particles with -Inf weight are removed.

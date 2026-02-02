@@ -3,11 +3,9 @@
 <url><loc>http://treeppl.org/treepplr/LICENSE-text.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/LICENSE.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/articles/coin-example.html</loc></url>
-<url><loc>http://treeppl.org/treepplr/articles/constant-rate-birth.html</loc></url>
-<url><loc>http://treeppl.org/treepplr/articles/hostrep-example.html</loc></url>
+<url><loc>http://treeppl.org/treepplr/articles/crbd-example.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/articles/index.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/articles/overview.html</loc></url>
-<url><loc>http://treeppl.org/treepplr/articles/tree_inference.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/authors.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/index.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/index.html</loc></url>
@@ -18,6 +16,7 @@
 <url><loc>http://treeppl.org/treepplr/reference/tp_json_to_phylo.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tp_list.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tp_map_tree.html</loc></url>
+<url><loc>http://treeppl.org/treepplr/reference/tp_mcmc_convergence.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tp_model.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tp_model_library.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tp_parse_host_rep.html</loc></url>
@@ -30,6 +29,8 @@
 <url><loc>http://treeppl.org/treepplr/reference/tp_smc_convergence.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tp_tempdir.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tp_treeppl_json.html</loc></url>
+<url><loc>http://treeppl.org/treepplr/reference/tp_write_data.html</loc></url>
+<url><loc>http://treeppl.org/treepplr/reference/tp_write_model.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/tree_age_cumul.html</loc></url>
 <url><loc>http://treeppl.org/treepplr/reference/treepplr-package.html</loc></url>
 </urlset>

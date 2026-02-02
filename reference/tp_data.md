@@ -6,7 +6,7 @@ Prepare data input for
 ## Usage
 
 ``` r
-tp_data(data_input)
+tp_data(data_input, data_file_name = "tmp_data_file", dir = tp_tempdir())
 ```
 
 ## Arguments
@@ -15,7 +15,7 @@ tp_data(data_input)
 
   One of the following options:
 
-  - A list (or structured list) containing TreePPL data, OR
+  - A named list (or structured list) containing TreePPL data, OR
 
   - The full path of a multiple sequence alignment in fasta (.fasta,
     .fas) or nexus (.nexus, .nex) format, OR
@@ -24,32 +24,39 @@ tp_data(data_input)
     treepplr (see
     [`tp_model_library()`](http://treeppl.org/treepplr/reference/tp_model_library.md)).
 
+- data_file_name:
+
+  An optional name for the file created. Ignored if `data_input` is the
+  name of a model from the TreePPL library.
+
 - dir:
 
   The directory where you want to save the data file in JSON format.
   Default is [`base::tempdir()`](https://rdrr.io/r/base/tempfile.html).
+  Ignored if `data_input` is the name of a model from the TreePPL
+  library.
 
 ## Value
 
 The path for the data file that will be used by
 [`tp_run()`](http://treeppl.org/treepplr/reference/tp_run.md).
 
+## Details
+
+`data_input`: The name of each list element has to match the name of a
+model input, which is defined in the TreePPL model code.
+
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 # Example using a model name supported by TreePPL
 input <- tp_data("tree_inference")
-#> Warning: running command 'find /tmp/NA -name testdata_tree_inference.json' had status 1
-#> Error in tp_data("tree_inference"): Invalid input string.
 input
-#> Error: object 'input' not found
 
 # Example using an internal FASTA file (same input data as before, but in fasta format)
 fasta_file <- system.file("extdata", "tree_inference.fasta", package = "treepplr")
 input <- tp_data(fasta_file)
-#> Error in cat(data, file = path): argument 1 (type 'closure') cannot be handled by 'cat'
 input
-#> Error: object 'input' not found
-# }
+} # }
 ```

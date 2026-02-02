@@ -65,17 +65,16 @@ A list of TreePPL output in parsed JSON format.
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
 # When using SMC
 # compile model and create SMC inference machinery
 exe_path <- tp_compile(model = "coin", method = "smc-bpf", particles = 2000)
-#> Warning: running command 'find /tmp/NA -name coin.tppl' had status 1
 
 # prepare data
 data_path <- tp_data(data_input = "coin")
 
 # run TreePPL
 result <- tp_run(exe_path, data_path, n_sweeps = 2)
-#> Warning: error in running command
 
 
 # When using MCMC
@@ -87,4 +86,5 @@ data_path <- tp_data(data_input = "coin")
 
 # run TreePPL
 result <- tp_run(exe_path, data_path, n_runs = 2)
+} # }
 ```

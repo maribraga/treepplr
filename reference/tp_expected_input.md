@@ -12,6 +12,8 @@ tp_expected_input(model)
 
 - model:
 
+  A TreePPL model
+
 ## Value
 
 The expected input data for a given TreePPL model.

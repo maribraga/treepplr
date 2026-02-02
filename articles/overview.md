@@ -86,6 +86,8 @@ runs you want to do.
 output <- tp_run(compiled_model = exe_path, data = data_path, n_runs = 4)
 ```
 
+## Convergence
+
 Then you can parse your output to produce a data frame and check for
 convergence.
 
@@ -100,3 +102,9 @@ tp_smc_convergence(output_df_smc)
 # If using MCMC
 output_df_mcmc <- tp_parse_mcmc(output)
 ```
+
+## Post-processing
+
+Different models produce different outputs and thus require different
+post-processing. See the model-specific tutorials for ways to process
+your TreePPL.

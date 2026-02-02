@@ -17,6 +17,8 @@
   Create a flat list
 - [`tp_map_tree()`](http://treeppl.org/treepplr/reference/tp_map_tree.md)
   : Find the Maximum A Posteriori (MAP) Tree from weighted samples
+- [`tp_mcmc_convergence()`](http://treeppl.org/treepplr/reference/tp_mcmc_convergence.md)
+  : Check for convergence across multiple MCMC runs.
 - [`tp_model()`](http://treeppl.org/treepplr/reference/tp_model.md) :
   Import a TreePPL model
 - [`tp_model_library()`](http://treeppl.org/treepplr/reference/tp_model_library.md)
@@ -41,5 +43,9 @@
   : Temporary directory for running treeppl
 - [`tp_treeppl_json()`](http://treeppl.org/treepplr/reference/tp_treeppl_json.md)
   : Convert a tppl_tree to TreePPL json str
+- [`tp_write_data()`](http://treeppl.org/treepplr/reference/tp_write_data.md)
+  : Write data to file
+- [`tp_write_model()`](http://treeppl.org/treepplr/reference/tp_write_model.md)
+  : Write out a custom model to tp_tempdir()
 - [`tree_age_cumul()`](http://treeppl.org/treepplr/reference/tree_age_cumul.md)
   : Calculate age in a tppl_tree
